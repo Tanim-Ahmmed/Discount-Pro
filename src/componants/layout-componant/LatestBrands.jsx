@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 const LatestBrands = ({brands}) => {
     
     return (
-        <div className="flex gap-2 bg-base-200 p-2">
-            <p className="bg-blue-300 px-3 py-1 font-semibold" > Brands </p>
+        <div className="flex gap-2 bg-base-100 p-2">
+            <p className=" bg-[#124E66] text-white px-3 py-1 font-semibold" > Brands </p>
            <Marquee pauseOnHover speed={150} >
             <div className="space-x-10 flex">  
             {

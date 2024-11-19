@@ -1,9 +1,11 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Login = () => {
- const {user, userLogin } = useContext(AuthContext);
+ const {setUser, userLogin } = useContext(AuthContext);
+ const location = useLocation();
+ const navigate = useNavigate();
 
  const handleLogin =(e) =>{
     e.preventDefault();
@@ -17,6 +19,8 @@ const Login = () => {
     userLogin(email,password)
     .then(res =>{
         const user = res.user;
+        setUser(user);
+        navigate(location?.state ? location.state : "/")
     })
     .catch((err) => console.log(err.code))
     
@@ -60,7 +64,7 @@ const Login = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary rounded-none">Login</button>
+                <button className="btn btn-neutral rounded-none">Login</button>
               </div>
             </form>
 

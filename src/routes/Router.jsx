@@ -7,6 +7,8 @@ import About from "../layouts/About";
 import Auth from "../layouts/Auth";
 import Login from "../componants/Login";
 import Register from "../componants/Register";
+import BrandDetails from "../componants/BrandDetails";
+import PrivateRoute from "./PrivateRoute";
 
 
 const Router =createBrowserRouter([
@@ -34,6 +36,13 @@ const Router =createBrowserRouter([
             {
                 path:"/about",
                 element:<About></About>,
+            },
+            {
+              path:"/brands/:id",
+              element:  <PrivateRoute>
+                            <BrandDetails></BrandDetails>
+                       </PrivateRoute>,
+              loader: () =>fetch("/brandsData.json"),
             },
             {
                 path:"/auth",

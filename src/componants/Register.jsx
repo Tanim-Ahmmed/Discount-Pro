@@ -89,7 +89,7 @@ const Register = () => {
             </div>
 
             <div className="form-control mt-6">
-              <button className="btn btn-primary rounded-none">Register</button>
+              <button className="btn btn-neutral rounded-none">Register</button>
             </div>
           </form>
 

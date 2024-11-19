@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom";
+
 const Brand = ({ brand }) => {
-  const { brand_logo, brand_name, rating, description, isSaleOn } = brand;
+  const { brand_logo, brand_name, rating, description, isSaleOn, _id } = brand;
 
   console.log(brand);
 
   return (
-    <div className="border rounded-lg p-4 shadow-md flex sm:flex-row flex-col items-center">
+    <div className="border rounded-lg p-4 shadow-md flex sm:flex-row flex-col items-center bg-white">
       <img
         src={brand_logo}
         alt={brand_name}
@@ -56,6 +58,9 @@ const Brand = ({ brand }) => {
             Sale is on!
           </div>
         )}
+      </div>
+      <div>
+        <Link to={`/brands/${_id}`} id={_id} className="btn btn-neutral  rounded-none">View Coupons</Link>
       </div>
     </div>
   );

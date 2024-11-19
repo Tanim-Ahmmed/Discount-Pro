@@ -10,7 +10,7 @@ const Header = () => {
     const links = <>
                 <li> <NavLink to="/">Home</NavLink> </li>
                 <li> <NavLink to="/brands">Brands</NavLink> </li>
-                <li> <NavLink to="/profile">my-profile</NavLink> </li>
+                <li> <NavLink to="/profile">My-profile</NavLink> </li>
                 <li> <NavLink to="/about">About Dev</NavLink> </li>
 
 
@@ -18,8 +18,8 @@ const Header = () => {
 
 
   return (
-    <div className="w-11/12 mx-auto">
-      <div className="navbar bg-base-100">
+    <div className="w-11/12 mx-auto ">
+      <div className="navbar bg-[#124E66]      text-white">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -40,7 +40,7 @@ const Header = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-[#124E66] rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
             {
                 links
@@ -48,7 +48,7 @@ const Header = () => {
 
             </ul>
           </div>
-          <a className="btn hidden md:block btn-ghost text-xl">DISCOUNT PRO</a>
+          <a className="btn hidden btn-ghost text-xl md:flex hover:bg-inherit  ">DISCOUNT PRO</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -64,7 +64,7 @@ const Header = () => {
             <p>{user && user.email}</p>
           </div>
           {
-            user && user?.email ? <button onClick={logOut} className="btn" to="/" >LogOut</button> : <Link className="btn" to="/auth/login" >Login</Link>
+            user && user?.email ? <button  onClick={logOut} className="btn font-semibold text-red-400 rounded-none btn-neutral" to="/" >LogOut</button> : <Link className="btn btn-neutral text-lg font-bold rounded-none text-[#50a7c9] " to="/auth/login" >Login</Link>
           }
           
         </div>
