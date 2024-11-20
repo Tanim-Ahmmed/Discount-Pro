@@ -1,9 +1,10 @@
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
- const {setUser, userLogin } = useContext(AuthContext);
+ const {setUser, userLogin, handleGoogleLogin } = useContext(AuthContext);
  const location = useLocation();
  const navigate = useNavigate();
 
@@ -34,15 +35,15 @@ const Login = () => {
             <h1 className="text-2xl font-bold ">Login your account</h1>
           </div>           
             <form onSubmit={handleLogin} className="card-body">
-              <div className="form-control">
-                <label className="label">
+              <div className="form-control ">
+                <label className="label ">
                   <span className="label-text">Email</span>
                 </label>
                 <input
                   type="email"
                   name="email"
                   placeholder="email"
-                  className="input input-bordered"
+                  className="input input-bordered rounded-none"
                   required
                 />
               </div>
@@ -54,7 +55,7 @@ const Login = () => {
                   type="password"
                   name="password"
                   placeholder="password"
-                  className="input input-bordered"
+                  className="input input-bordered rounded-none"
                   required
                 />
                 <label className="label">
@@ -68,10 +69,15 @@ const Login = () => {
               </div>
             </form>
 
-            <p className="text-center font-semibold">Don't Have an Account?
+            <p className="text-center font-semibold pb-6">Don't Have an Account?
             <Link to="/auth/register" className="text-red-500 ml-3 font-bold">Register</Link>
 
             </p>
+
+            <div onClick={handleGoogleLogin} className="flex justify-center items-center gap-4 border rounded-none py-3 font-bold w-10/12 mx-auto hover:text-white hover:bg-neutral hover:cursor-pointer">
+             <FcGoogle />
+               <button >Sign in with Google</button>
+            </div>
 
           </div>
         

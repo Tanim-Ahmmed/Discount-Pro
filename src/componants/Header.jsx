@@ -10,7 +10,9 @@ const Header = () => {
     const links = <>
                 <li> <NavLink to="/">Home</NavLink> </li>
                 <li> <NavLink to="/brands">Brands</NavLink> </li>
-                <li> <NavLink to="/profile">My-profile</NavLink> </li>
+              {
+                user && <li> <NavLink to="/profile">My-profile</NavLink> </li>
+              }
                 <li> <NavLink to="/about">About Dev</NavLink> </li>
 
 
