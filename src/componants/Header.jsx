@@ -63,9 +63,11 @@ const Header = () => {
           <div>
             <p>{user && user.email}</p>
           </div>
+          <div className=" hover:bg-[#0f4155] p-1"> 
           {
-            user && user?.email ? <button  onClick={logOut} className="btn font-semibold text-red-400 rounded-none btn-neutral" to="/" >LogOut</button> : <Link className="btn btn-neutral text-lg font-bold rounded-none text-[#50a7c9] " to="/auth/login" >Login</Link>
+            user && user?.email ? <button  onClick={logOut} className="btn font-semibold text-red-400 text-lg rounded-none btn-neutral" to="/" >LogOut</button> : <Link className="btn btn-neutral text-lg font-bold rounded-none text-[#50a7c9] " to="/auth/login" >Login</Link>
           }
+          </div>
           
         </div>
       </div>

@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
 
@@ -16,6 +17,43 @@ const Register = () => {
         const email = form.get("email");
         const photo = form.get("photo");
         const password = form.get("password");
+        const conPass  = form.get("confirm");
+
+        if(password.length < 6 ){ 
+            toast.error("Passward must contain atleast 6 character. " , {
+              position: "top-center",
+              autoClose: 3000, });
+              return;
+  
+          
+        }
+
+        if(password !== conPass){
+
+          toast.error("Passward didn' t match " , {
+            position: "top-center",
+            autoClose: 3000, });
+            return;
+
+        }
+
+        if(!/[a-z]/.test(password)){
+
+          toast.error("Passward must contain atleast one lowercase latter. " , {
+            position: "top-center",
+            autoClose: 3000, });
+            return;
+
+        }
+
+        if(!/[A-Z]/.test(password)){
+
+          toast.error("Passward must contain atleast one uppercase latter. " , {
+            position: "top-center",
+            autoClose: 3000, });
+            return;
+
+        }
 
         console.log({name, email, photo, password})
         createNewUser(email, password)
@@ -88,6 +126,20 @@ const Register = () => {
               />
             </div>
 
+
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Confirm Password</span>
+              </label>
+              <input
+                type="password"
+                name="confirm"
+                placeholder="confirm password"
+                className="input input-bordered"
+                required
+              />
+            </div>
+
             <div className="form-control mt-6">
               <button className="btn btn-neutral rounded-none">Register</button>
             </div>
@@ -101,6 +153,7 @@ const Register = () => {
           </p>
         </div>
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };
