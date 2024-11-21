@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Header from "./componants/Header";
 import Footer from "./componants/Footer";
+import { ToastContainer } from "react-toastify";
 
 
 const Root = () => {
@@ -9,6 +10,7 @@ const Root = () => {
            <Header></Header>
      <div className="min-h-screen"> <Outlet></Outlet>  </div>  
            <Footer></Footer>
+           <ToastContainer></ToastContainer>
         </div>
     );
 };

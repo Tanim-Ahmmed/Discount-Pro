@@ -1,14 +1,29 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import { FcGoogle } from "react-icons/fc";
+import { toast, } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { RiEyeCloseFill } from "react-icons/ri";
+import { BsFillEyeFill } from "react-icons/bs"; 
 const Register = () => {
-
+     
     const {createNewUser, setUser, manageProfile,handleGoogleLogin } = useContext(AuthContext);
     const [error , setError] = useState("");
+    const [showPass , setShowPass] = useState(false);
     const navigate = useNavigate();
+
+    const handleLoginWithGoogle =() =>{
+       handleGoogleLogin()
+       .then((res) =>{
+        const user = res.user;
+        setUser(user);
+        navigate("/");
+        toast.success(`Welcome ${user.displayName } ! login successfull ` , {
+          position: "top-center",
+          autoClose: 3000, });
+       })
+    }
 
     const handleRegister =(e) =>{
         e.preventDefault();
@@ -43,9 +58,6 @@ const Register = () => {
 
         if(!/[A-Z]/.test(password)){
 
-          toast.error("Passward must contain atleast one uppercase latter. " , {
-            position: "top-center",
-            autoClose: 3000, });
             setError("Passward must contain atleast one uppercase latter. ");
             return;
 
@@ -57,8 +69,17 @@ const Register = () => {
           const user= res.user;
           setUser(user);
           console.log(user);
-          manageProfile(name, photo);
-          navigate("/");
+          manageProfile({displayName: name, photoURL: photo})
+          .then((res)=>{
+            
+            navigate("/");
+          }).catch(err => {
+            setError(err.code);
+          })
+
+          toast.success(`Welcome ${user.displayName } ! Register successfull ` , {
+            position: "top-center",
+            autoClose: 3000, });
         })
         .catch(err => setError(err.code))
     }
@@ -111,31 +132,45 @@ const Register = () => {
             </div>
 
 
-            <div className="form-control">
+            <div className="form-control relative">
               <label className="label">
                 <span className="label-text">Password</span>
               </label>
               <input
-                type="password"
+                type={showPass ? "text" : "password" }
                 name="password"
                 placeholder="password"
                 className="input input-bordered rounded-none"
                 required
               />
+               <button
+                type="button"
+                onClick={() => setShowPass(!showPass)}
+                className="btn rounded-none  btn-xs bg-base-200 absolute right-3 top-12"
+              >
+                {showPass ? <BsFillEyeFill /> : <RiEyeCloseFill />}
+              </button>
             </div>
 
 
-            <div className="form-control">
+            <div className="form-control relative">
               <label className="label">
                 <span className="label-text">Confirm Password</span>
               </label>
               <input
-                type="password"
+                 type={showPass ? "text" : "password" }
                 name="confirm"
                 placeholder="confirm password"
                 className="input input-bordered rounded-none"
                 required
               />
+               <button
+                type="button"
+                onClick={() => setShowPass(!showPass)}
+                className="btn rounded-none  btn-xs bg-base-200 absolute right-3 top-12"
+              >
+                {showPass ? <BsFillEyeFill /> : <RiEyeCloseFill />}
+              </button>
             </div>
 
             <div className="form-control mt-6">
@@ -147,18 +182,18 @@ const Register = () => {
 
           <p className="text-center font-semibold py-3">
             Allready Have an Account?
-            <Link to="/auth/login" className="text-red-500 ml-3 font-bold">
+            <Link  className="text-red-500 ml-3 font-bold">
               Login
             </Link>
           </p>
-          <div onClick={handleGoogleLogin} className="flex justify-center items-center gap-4 border rounded-none py-3 font-bold w-10/12 mx-auto hover:text-white hover:bg-neutral hover:cursor-pointer">
+          <div  onClick={handleLoginWithGoogle} className="flex justify-center items-center gap-4 border rounded-none py-3 font-bold w-10/12 mx-auto hover:text-white hover:bg-neutral hover:cursor-pointer">
              <FcGoogle />
-               <button >Sign in with Google</button>
+               <button > Sign in with Google</button>
             </div>
 
         </div>
       </div>
-      <ToastContainer></ToastContainer>
+     
     </div>
   );
 };

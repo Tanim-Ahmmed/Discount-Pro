@@ -9,6 +9,7 @@ import Login from "../componants/Login";
 import Register from "../componants/Register";
 import BrandDetails from "../componants/BrandDetails";
 import PrivateRoute from "./PrivateRoute";
+import Update from "../componants/Update";
 
 
 const Router =createBrowserRouter([
@@ -38,6 +39,13 @@ const Router =createBrowserRouter([
             {
                 path:"/about",
                 element:<About></About>,
+            },
+            {
+              path: "/profile/update",
+              element: <PrivateRoute>
+                         <Update></Update>
+                      </PrivateRoute>
+
             },
             {
               path:"/brands/:id",

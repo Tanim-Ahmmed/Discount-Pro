@@ -32,15 +32,13 @@ const AuthProvider = ({ children }) => {
 
   const handleGoogleLogin = () => {
     setLoading(true);
-    signInWithPopup(auth, googleProvider);
+   return  signInWithPopup(auth, googleProvider);
   };
 
 
-  const manageProfile = (name, image) =>{
-    updateProfile(auth.currentUser,{
-      displayName:name, photoURL:image
-    })
-  }
+  const manageProfile = (updateData) =>{
+    return  updateProfile(auth.currentUser,updateData);
+  };
 
   const logOut = () => {
     setLoading(true);
