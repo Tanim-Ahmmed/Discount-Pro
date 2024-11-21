@@ -4,7 +4,7 @@
     "brand_name": "Daraz",
     "rating": 4.5,
     "description": "Explore a wide range of tech gadgets and accessories at unbeatable prices.",
-    "brand_logo": "https://i.ibb.co.com/HXXpyLj/gadgetzone.jpg",
+    "brand_logo": "https://i.ibb.co.com/Rp3BXzS/daraz.png",
     "coupons": [
       {
         "coupon_code": "TECH10",
@@ -30,7 +30,7 @@
     "brand_name": "Evaly",
     "rating": 4.2,
     "description": "Discover trendy fashion and accessories for all occasions, now at your fingertips.",
-    "brand_logo": "https://i.ibb.co.com/s6rmpcp/Styleaura.jpg",
+    "brand_logo": "https://i.ibb.co.com/XkcThcR/evaly.jpg",
     "coupons": [
       {
         "coupon_code": "STYLE20",
@@ -49,7 +49,7 @@
     "brand_name": "Hungrynaki",
     "rating": 4.8,
     "description": "Savor a variety of delicious snacks and beverages, delivered quickly to your doorstep.",
-    "brand_logo": "https://i.ibb.co.com/gjLx184/foodi.png",
+    "brand_logo": "https://i.ibb.co.com/GdqmSfF/hungry-logo.png",
     "coupons": [
       {
         "coupon_code": "SNACK5",
@@ -75,7 +75,7 @@
     "brand_name": "Priyoshop",
     "rating": 4.0,
     "description": "Get premium fitness gear and supplements to support your wellness journey.",
-    "brand_logo": "https://i.ibb.co.com/gFwm5g0/fitlife.jpg",
+    "brand_logo": "https://i.ibb.co.com/t2RVNRs/priyoshop.jpg",
     "coupons": [
       {
         "coupon_code": "GYM15",
@@ -92,7 +92,7 @@
         "coupon_type": "percentage"
       }
     ],
-    "shop_link": "https://fitlifebrands.com/",
+    "shop_link": "https://priyoshopretail.com/",
     "category": "Fitness",
     "isSaleOn": true
   },
@@ -101,7 +101,7 @@
     "brand_name": "Bagdoom",
     "rating": 4.9,
     "description": "Affordable and reliable travel essentials for your next adventure.",
-    "brand_logo": "https://i.ibb.co.com/7nGhhwq/trableE.webp",
+    "brand_logo": "https://i.ibb.co.com/x1WWyQZ/bagdoom.jpg",
     "coupons": [
       {
         "coupon_code": "FLIGHT50",
@@ -118,7 +118,7 @@
         "coupon_type": "percentage"
       }
     ],
-    "shop_link": "https://traveleazyglobal.com/",
+    "shop_link": "https://www.bagdoom.com/",
     "category": "Travel",
     "isSaleOn": false
   },
@@ -127,7 +127,7 @@
     "brand_name": "Othoba",
     "rating": 4.6,
     "description": "Add charm to your living spaces with stunning home décor items.",
-    "brand_logo": "https://i.ibb.co.com/f4fGwWp/HomeE.png",
+    "brand_logo": "https://i.ibb.co.com/xjfHxNX/Othoba.jpg",
     "coupons": [
       {
         "coupon_code": "DECOR15",
@@ -151,7 +151,7 @@
         "coupon_type": "percentage"
       }
     ],
-    "shop_link": "https://homeessence.in/",
+    "shop_link": "https://www.othoba.com/",
     "category": "Home Décor",
     "isSaleOn": true
   },
@@ -160,7 +160,7 @@
     "brand_name": "Rokomari",
     "rating": 4.7,
     "description": "Discover an extensive collection of books for all readers.",
-    "brand_logo": "https://i.ibb.co.com/5cnwW9K/bookH.jpg",
+    "brand_logo": "https://i.ibb.co.com/K0h1XMs/rokomari.png",
     "coupons": [
       {
         "coupon_code": "READ20",
@@ -177,7 +177,7 @@
         "coupon_type": "bundle"
       }
     ],
-    "shop_link": "https://www.bookhaven.ie/",
+    "shop_link": "https://www.rokomari.com/book",
     "category": "Books",
     "isSaleOn": true
   },
@@ -186,7 +186,7 @@
     "brand_name": "Chaldal",
     "rating": 4.9,
     "description": "Choose eco-friendly products to embrace a sustainable lifestyle.",
-    "brand_logo": "https://i.ibb.co.com/LNphxmt/greenE.webp",
+    "brand_logo": "https://i.ibb.co.com/f15SdrM/chaldal.jpg",
     "coupons": [
       {
         "coupon_code": "ECO10",
@@ -203,7 +203,7 @@
         "coupon_type": "percentage"
       }
     ],
-    "shop_link": "https://greenearthcleaning.com/",
+    "shop_link": "https://chaldal.com/",
     "category": "Sustainability",
     "isSaleOn": true
   }

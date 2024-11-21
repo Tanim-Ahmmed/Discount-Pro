@@ -1,9 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 
-
-const OnSell = ({brand}) => {
-
+const RecentlyFinised = ({brand}) => {
     const {brand_name, brand_logo,category, coupons} = brand;
     
     const navigate = useNavigate();
@@ -11,10 +9,8 @@ const OnSell = ({brand}) => {
     const handleLogoClick =()=>{
          navigate('/brands')
     }
-
-
     return (
-        <div className="max-w-sm bg-green-100 border border-green-600 shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300">
+        <div className="max-w-sm shadow-lg bg-red-200 border border-red-500  rounded-lg p-6 hover:shadow-xl transition-shadow duration-300">
         <div className="flex items-center space-x-4">
           <img
             src={brand_logo}
@@ -36,4 +32,4 @@ const OnSell = ({brand}) => {
     );
 };
 
-export default OnSell;
+export default RecentlyFinised;

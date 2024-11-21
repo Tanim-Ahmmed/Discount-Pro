@@ -47,7 +47,7 @@ const BrandDetails = () => {
             <CopyToClipboard text={coupon.coupon_code}>
                 <button onClick={handleCopy} className="btn btn-neutral btn-sm rounded-none">Copy Code</button>
             </CopyToClipboard>
-            {console.log(coupon)}
+           
             <a href={shop_link}
             target="blank"
             className="btn btn-neutral btn-sm rounded-none"

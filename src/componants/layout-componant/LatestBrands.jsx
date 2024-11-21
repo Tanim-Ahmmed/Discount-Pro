@@ -9,15 +9,19 @@ const LatestBrands = ({ brands }) => {
       <Marquee pauseOnHover speed={150}>
         <div className="space-x-10 flex">
           {brands.map((brand) => (
-            <div className="px-2 text-center">
-              <Link key={brand._id} to="/brands">
-                <img
+            <div key={brand._id} className="px-2 text-center">
+              <Link  to="/brands">
+              <div>
+              <img
                   src={brand.brand_logo}
                   alt=""
-                  className="w-10 rounded-full mx-3"
+                  className="w-10 h-10 rounded-full object-cover mx-3"
                 />
+                <p>{brand.brand_name}</p>
+              </div>
+                
               </Link>
-              <p>{brand.brand_name}</p>
+              
             </div>
           ))}
         </div>
