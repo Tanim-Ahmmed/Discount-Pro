@@ -4,7 +4,7 @@ const LatestBrands = ({brands}) => {
     
     return (
         <div className="flex gap-2 bg-base-100 p-2">
-            <p className=" bg-[#124E66] text-white px-3 py-1 font-semibold" > Brands </p>
+            <p className=" bg-[#124E66] text-white px-3 py-1 font-semibold animate__animated animate__bounce" > Brands </p>
            <Marquee pauseOnHover speed={150} >
             <div className="space-x-10 flex">  
             {

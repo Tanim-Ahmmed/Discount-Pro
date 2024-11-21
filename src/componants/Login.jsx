@@ -8,7 +8,7 @@ import { RiEyeCloseFill } from "react-icons/ri";
 import { BsFillEyeFill } from "react-icons/bs"; 
 const Login = () => {
   const [showPass , setShowPass] = useState(false);
-  const { setUser, userLogin, handleGoogleLogin } = useContext(AuthContext);
+  const { setUser, userLogin, handleGoogleLogin, emailRef } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -43,6 +43,7 @@ const Login = () => {
           position: "top-center",
           autoClose: 3000,
         });
+        
       })
       .catch((err) => {
         toast.error(` login failed! please try again. `, {
@@ -50,6 +51,21 @@ const Login = () => {
           autoClose: 3000,
         });
       });
+  };
+
+  const handleForgetPass = () =>{
+    const email = emailRef.current?.value ;
+    if(!email){
+      toast.error(' please enter your email ', {
+        position: "top-center",
+        autoClose: 3000,
+      });
+
+    }  else{
+      navigate("/auth/login/reset");
+
+    }
+
   };
 
   return (
@@ -68,6 +84,7 @@ const Login = () => {
                 type="email"
                 name="email"
                 placeholder="email"
+                ref={emailRef}
                 className="input input-bordered rounded-none"
                 required
               />
@@ -92,9 +109,9 @@ const Login = () => {
               </button>
 
               <label className="label">
-                <a href="#" className="label-text-alt link link-hover">
+                <Link onClick={handleForgetPass} className="label-text-alt link link-hover">
                   Forgot password?
-                </a>
+                </Link>
               </label>
             </div>
             <div className="form-control mt-6">

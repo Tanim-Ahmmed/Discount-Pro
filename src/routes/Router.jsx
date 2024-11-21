@@ -10,6 +10,7 @@ import Register from "../componants/Register";
 import BrandDetails from "../componants/BrandDetails";
 import PrivateRoute from "./PrivateRoute";
 import Update from "../componants/Update";
+import ForgetPass from "../componants/ForgetPass";
 
 
 const Router =createBrowserRouter([
@@ -65,6 +66,10 @@ const Router =createBrowserRouter([
                   {
                     path:"register",
                     element:<Register></Register>,
+                  },
+                  {
+                    path:"login/reset",
+                    element:<ForgetPass></ForgetPass>
                   },
                   {
                     index: true, 

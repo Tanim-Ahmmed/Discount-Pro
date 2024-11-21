@@ -182,7 +182,7 @@ const Register = () => {
 
           <p className="text-center font-semibold py-3">
             Allready Have an Account?
-            <Link  className="text-red-500 ml-3 font-bold">
+            <Link  to="/auth/login" className="text-red-500 ml-3 font-bold">
               Login
             </Link>
           </p>

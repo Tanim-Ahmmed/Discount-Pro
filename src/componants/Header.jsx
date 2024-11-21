@@ -3,9 +3,8 @@ import { NavLink, Link } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Header = () => {
-           
+           console.log(import.meta.env.VITE_a);
   const {user, logOut} = useContext(AuthContext);
-  console.log(user)
 
     const links = <>
                 <li> <NavLink to="/">Home</NavLink> </li>
