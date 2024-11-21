@@ -18,7 +18,7 @@ const Home = () => {
            <LatestBrands brands={brands}></LatestBrands>
           <main>
             <h2 className="text-lg font-semibold py-6 animate__animated animate__bounce">Brands on Sell</h2>
-             <div>
+             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 animate__animated  animate__pulse">
                 {
                  brandsOnsell.map(brand => <OnSell key={brand._id} brand={brand}></OnSell> )
                 }

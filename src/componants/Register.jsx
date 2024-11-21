@@ -63,12 +63,12 @@ const Register = () => {
 
         }
 
-        console.log({name, email, photo, password})
+     
         createNewUser(email, password)
         .then(res =>{
           const user= res.user;
           setUser(user);
-          console.log(user);
+         
           manageProfile({displayName: name, photoURL: photo})
           .then((res)=>{
             

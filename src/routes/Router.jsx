@@ -11,7 +11,7 @@ import BrandDetails from "../componants/BrandDetails";
 import PrivateRoute from "./PrivateRoute";
 import Update from "../componants/Update";
 import ForgetPass from "../componants/ForgetPass";
-
+import ErrorPage from "../componants/ErrorPage"
 
 const Router =createBrowserRouter([
 
@@ -79,7 +79,7 @@ const Router =createBrowserRouter([
             },
             {
                 path: "*",
-                element: <h2>error</h2>,
+                element: <ErrorPage></ErrorPage>,
             },
         
 

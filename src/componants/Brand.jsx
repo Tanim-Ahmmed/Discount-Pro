@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 const Brand = ({ brand }) => {
   const { brand_logo, brand_name, rating, description, isSaleOn, _id } = brand;
 
-  console.log(brand);
-
   return (
     <div className="border rounded-lg p-4 shadow-md flex sm:flex-row flex-col items-center bg-white">
       <img
@@ -16,28 +14,28 @@ const Brand = ({ brand }) => {
         <div className="flex items-center mb-2">
           <h2 className="text-lg font-semibold mr-2">{brand_name}</h2>
 
-          <div className="flex items-center text-yellow-500">
+          <div className="flex items-center text-blue-800">
             <div className="rating">
               <input
                 type="radio"
                 name="rating-4"
-                className="mask mask-star-2 bg-yellow-400"
+                className="mask mask-star-2 bg-[#124e66]"
               />
               <input
                 type="radio"
                 name="rating-4"
-                className="mask mask-star-2 bg-yellow-400"
+                className="mask mask-star-2 bg-[#124e66]"
                
               />
               <input
                 type="radio"
                 name="rating-4"
-                className="mask mask-star-2 bg-yellow-400"
+                className="mask mask-star-2 bg-[#124e66]"
               />
               <input
                 type="radio"
                 name="rating-4"
-                className="mask mask-star-2 bg-yellow-400"
+                className="mask mask-star-2 bg-[#124e66]"
                 
               />
               <input

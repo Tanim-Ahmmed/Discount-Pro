@@ -12,7 +12,7 @@ const ForgetPass = () => {
          handleResetPassword(email)
          .then(() =>{
             window.location.href = "https://www.gmail.com";
-         }).catch((err) => console.log(err.code))
+         })
        };
     };
   return (

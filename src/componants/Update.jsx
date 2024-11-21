@@ -18,7 +18,7 @@ const Update = () => {
       
       navigate("/");
     }).catch(err => {
-      console.log(err.code);
+      // console.log(err.code);
     })
   }
 

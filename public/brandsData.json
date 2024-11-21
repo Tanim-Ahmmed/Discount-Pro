@@ -1,212 +1,210 @@
 [
-    {
-      "_id": "1a2b3c4d",
-      "brand_name": "GadgetZone",
-      "rating": 4.5,
-      "description": "Your one-stop shop for all things tech.",
-      "brand_logo": "https://i.ibb.co.com/HXXpyLj/gadgetzone.jpg",
-      "coupons": [
-        {
-          "coupon_code": "TECH10",
-          "description": "10% off on all electronics",
-          "expiry_date": "2024-12-31",
-          "condition": "Minimum purchase of $100",
-          "coupon_type": "percentage"
-        },
-        {
-          "coupon_code": "FREESHIP",
-          "description": "Free shipping on orders over $50",
-          "expiry_date": "2024-11-30",
-          "condition": "Applicable only for standard shipping",
-          "coupon_type": "shipping"
-        }
-      ],
-      "shop_link": "https://www.gadgetzone.com.my/",
-      "category": "Electronics",
-      "isSaleOn": true
-    },
-    {
-      "_id": "5e6f7g8h",
-      "brand_name": "StyleAura",
-      "rating": 4.2,
-      "description": "Fashion and accessories for every occasion.",
-      "brand_logo": "https://i.ibb.co.com/s6rmpcp/Styleaura.jpg",
-      "coupons": [
-        {
-          "coupon_code": "STYLE20",
-          "description": "20% off on new arrivals",
-          "expiry_date": "2024-11-30",
-          "condition": "Not applicable on sale items",
-          "coupon_type": "percentage"
-        }
-      ],
-      "shop_link": "https://www.styleaura.com/blogs/news/tagged/aura",
-      "category": "Fashion",
-      "isSaleOn": true
-    },
-    {
-      "_id": "9i0j1k2l",
-      "brand_name": "Foodibd",
-      "rating": 4.8,
-      "description": "Delicious snacks and beverages delivered to your door.",
-      "brand_logo": "https://i.ibb.co.com/gjLx184/foodi.png",
-      "coupons": [
-        {
-          "coupon_code": "SNACK5",
-          "description": "5% off on all snacks",
-          "expiry_date": "2024-12-15",
-          "condition": "No minimum order value",
-          "coupon_type": "percentage"
-        },
-        {
-          "coupon_code": "MEAL50",
-          "description": "$50 off on party meals",
-          "expiry_date": "2024-11-25",
-          "condition": "Order must include 5+ items",
-          "coupon_type": "flat"
-        }
-      ],
-      "shop_link": "https://foodibd.com/",
-      "category": "Food",
-      "isSaleOn": false
-    },
-    {
-      "_id": "3m4n5o6p",
-      "brand_name": "FitLife",
-      "rating": 4.0,
-      "description": "Fitness gear and supplements for a healthier you.",
-      "brand_logo": "https://i.ibb.co.com/gFwm5g0/fitlife.jpg",
-      "coupons": [
-        {
-          "coupon_code": "GYM15",
-          "description": "15% off on gym equipment",
-          "expiry_date": "2024-12-10",
-          "condition": "Only applicable for new customers",
-          "coupon_type": "percentage"
-        },
-        {
-          "coupon_code": "HEALTH10",
-          "description": "10% off on health supplements",
-          "expiry_date": "2024-11-20",
-          "condition": "Valid on orders above $50",
-          "coupon_type": "percentage"
-        }
-      ],
-      "shop_link": "https://fitlifebrands.com/",
-      "category": "Fitness",
-      "isSaleOn": true
-    },
-    {
-      "_id": "7q8r9s0t",
-      "brand_name": "TravelEasy",
-      "rating": 4.9,
-      "description": "Affordable travel essentials for your adventures.",
-      "brand_logo": "https://i.ibb.co.com/7nGhhwq/trableE.webp",
-      "coupons": [
-        {
-          "coupon_code": "FLIGHT50",
-          "description": "$50 off on international flights",
-          "expiry_date": "2024-12-05",
-          "condition": "Booking must be above $500",
-          "coupon_type": "flat"
-        },
-        {
-          "coupon_code": "BAG10",
-          "description": "10% off on travel bags",
-          "expiry_date": "2024-11-30",
-          "condition": "Only applicable on select brands",
-          "coupon_type": "percentage"
-        }
-      ],
-      "shop_link": "https://traveleazyglobal.com/",
-      "category": "Travel",
-      "isSaleOn": false
-    },
-    {
-      "_id": "1u2v3w4x",
-      "brand_name": "HomeEssence",
-      "rating": 4.6,
-      "description": "Beautiful and functional home décor.",
-      "brand_logo": "https://i.ibb.co.com/f4fGwWp/HomeE.png",
-      "coupons": [
-        {
-          "coupon_code": "DECOR15",
-          "description": "15% off on all home décor items",
-          "expiry_date": "2024-11-28",
-          "condition": "No minimum purchase",
-          "coupon_type": "percentage"
-        },
-        {
-          "coupon_code": "LIGHT20",
-          "description": "20% off on lighting products",
-          "expiry_date": "2024-12-20",
-          "condition": "Valid on orders above $100",
-          "coupon_type": "percentage"
-        },
-        {
-          "coupon_code": "WINTER25",
-          "description": "25% off on winter collection",
-          "expiry_date": "2024-12-31",
-          "condition": "Valid on purchases above $75",
-          "coupon_type": "percentage"
-        }
-      ],
-      "shop_link": "https://homeessence.in/",
-      "category": "Home Décor",
-      "isSaleOn": true
-    },
-
-    {
-        "_id": "2y3z4a5b",
-        "brand_name": "BookHaven",
-        "rating": 4.7,
-        "description": "Find your next favorite read among thousands of books.",
-        "brand_logo": "https://i.ibb.co.com/5cnwW9K/bookH.jpg",
-        "coupons": [
-          {
-            "coupon_code": "READ20",
-            "description": "20% off on all book purchases",
-            "expiry_date": "2024-12-31",
-            "condition": "Valid on orders over $30",
-            "coupon_type": "percentage"
-          },
-          {
-            "coupon_code": "BOOKBUNDLE",
-            "description": "Buy 3, Get 1 Free on select titles",
-            "expiry_date": "2024-11-30",
-            "condition": "Applicable on select genres",
-            "coupon_type": "bundle"
-          }
-        ],
-        "shop_link": "https://www.bookhaven.ie/",
-        "category": "Books",
-        "isSaleOn": true
+  {
+    "_id": "1a2b3c4d",
+    "brand_name": "Daraz",
+    "rating": 4.5,
+    "description": "Explore a wide range of tech gadgets and accessories at unbeatable prices.",
+    "brand_logo": "https://i.ibb.co.com/HXXpyLj/gadgetzone.jpg",
+    "coupons": [
+      {
+        "coupon_code": "TECH10",
+        "description": "10% off on all electronics",
+        "expiry_date": "2024-12-31",
+        "condition": "Minimum purchase of $100",
+        "coupon_type": "percentage"
       },
       {
-        "_id": "6c7d8e9f",
-        "brand_name": "GreenEarth",
-        "rating": 4.9,
-        "description": "Eco-friendly products for a sustainable lifestyle.",
-        "brand_logo": "https://i.ibb.co.com/LNphxmt/greenE.webp",
-        "coupons": [
-          {
-            "coupon_code": "ECO10",
-            "description": "10% off on all eco-friendly items",
-            "expiry_date": "2024-12-15",
-            "condition": "No minimum order value",
-            "coupon_type": "percentage"
-          },
-          {
-            "coupon_code": "SAVE25",
-            "description": "25% off on biodegradable products",
-            "expiry_date": "2024-12-25",
-            "condition": "Valid for first-time customers only",
-            "coupon_type": "percentage"
-          }
-        ],
-        "shop_link": "https://greenearthcleaning.com/",
-        "category": "Sustainability",
-        "isSaleOn": true
+        "coupon_code": "FREESHIP",
+        "description": "Free shipping on orders over $50",
+        "expiry_date": "2024-11-30",
+        "condition": "Applicable only for standard shipping",
+        "coupon_type": "shipping"
       }
-  ]
-  
+    ],
+    "shop_link": "https://www.daraz.com.bd/",
+    "category": "Electronics",
+    "isSaleOn": true
+  },
+  {
+    "_id": "5e6f7g8h",
+    "brand_name": "Evaly",
+    "rating": 4.2,
+    "description": "Discover trendy fashion and accessories for all occasions, now at your fingertips.",
+    "brand_logo": "https://i.ibb.co.com/s6rmpcp/Styleaura.jpg",
+    "coupons": [
+      {
+        "coupon_code": "STYLE20",
+        "description": "20% off on new arrivals",
+        "expiry_date": "2024-11-30",
+        "condition": "Not applicable on sale items",
+        "coupon_type": "percentage"
+      }
+    ],
+    "shop_link": "https://evaly.com.bd/",
+    "category": "Fashion",
+    "isSaleOn": true
+  },
+  {
+    "_id": "9i0j1k2l",
+    "brand_name": "Hungrynaki",
+    "rating": 4.8,
+    "description": "Savor a variety of delicious snacks and beverages, delivered quickly to your doorstep.",
+    "brand_logo": "https://i.ibb.co.com/gjLx184/foodi.png",
+    "coupons": [
+      {
+        "coupon_code": "SNACK5",
+        "description": "5% off on all snacks",
+        "expiry_date": "2024-12-15",
+        "condition": "No minimum order value",
+        "coupon_type": "percentage"
+      },
+      {
+        "coupon_code": "MEAL50",
+        "description": "$50 off on party meals",
+        "expiry_date": "2024-11-25",
+        "condition": "Order must include 5+ items",
+        "coupon_type": "flat"
+      }
+    ],
+    "shop_link": "https://foodibd.com/",
+    "category": "Food",
+    "isSaleOn": false
+  },
+  {
+    "_id": "3m4n5o6p",
+    "brand_name": "Priyoshop",
+    "rating": 4.0,
+    "description": "Get premium fitness gear and supplements to support your wellness journey.",
+    "brand_logo": "https://i.ibb.co.com/gFwm5g0/fitlife.jpg",
+    "coupons": [
+      {
+        "coupon_code": "GYM15",
+        "description": "15% off on gym equipment",
+        "expiry_date": "2024-12-10",
+        "condition": "Only applicable for new customers",
+        "coupon_type": "percentage"
+      },
+      {
+        "coupon_code": "HEALTH10",
+        "description": "10% off on health supplements",
+        "expiry_date": "2024-11-20",
+        "condition": "Valid on orders above $50",
+        "coupon_type": "percentage"
+      }
+    ],
+    "shop_link": "https://fitlifebrands.com/",
+    "category": "Fitness",
+    "isSaleOn": true
+  },
+  {
+    "_id": "7q8r9s0t",
+    "brand_name": "Bagdoom",
+    "rating": 4.9,
+    "description": "Affordable and reliable travel essentials for your next adventure.",
+    "brand_logo": "https://i.ibb.co.com/7nGhhwq/trableE.webp",
+    "coupons": [
+      {
+        "coupon_code": "FLIGHT50",
+        "description": "$50 off on international flights",
+        "expiry_date": "2024-12-05",
+        "condition": "Booking must be above $500",
+        "coupon_type": "flat"
+      },
+      {
+        "coupon_code": "BAG10",
+        "description": "10% off on travel bags",
+        "expiry_date": "2024-11-30",
+        "condition": "Only applicable on select brands",
+        "coupon_type": "percentage"
+      }
+    ],
+    "shop_link": "https://traveleazyglobal.com/",
+    "category": "Travel",
+    "isSaleOn": false
+  },
+  {
+    "_id": "1u2v3w4x",
+    "brand_name": "Othoba",
+    "rating": 4.6,
+    "description": "Add charm to your living spaces with stunning home décor items.",
+    "brand_logo": "https://i.ibb.co.com/f4fGwWp/HomeE.png",
+    "coupons": [
+      {
+        "coupon_code": "DECOR15",
+        "description": "15% off on all home décor items",
+        "expiry_date": "2024-11-28",
+        "condition": "No minimum purchase",
+        "coupon_type": "percentage"
+      },
+      {
+        "coupon_code": "LIGHT20",
+        "description": "20% off on lighting products",
+        "expiry_date": "2024-12-20",
+        "condition": "Valid on orders above $100",
+        "coupon_type": "percentage"
+      },
+      {
+        "coupon_code": "WINTER25",
+        "description": "25% off on winter collection",
+        "expiry_date": "2024-12-31",
+        "condition": "Valid on purchases above $75",
+        "coupon_type": "percentage"
+      }
+    ],
+    "shop_link": "https://homeessence.in/",
+    "category": "Home Décor",
+    "isSaleOn": true
+  },
+  {
+    "_id": "2y3z4a5b",
+    "brand_name": "Rokomari",
+    "rating": 4.7,
+    "description": "Discover an extensive collection of books for all readers.",
+    "brand_logo": "https://i.ibb.co.com/5cnwW9K/bookH.jpg",
+    "coupons": [
+      {
+        "coupon_code": "READ20",
+        "description": "20% off on all book purchases",
+        "expiry_date": "2024-12-31",
+        "condition": "Valid on orders over $30",
+        "coupon_type": "percentage"
+      },
+      {
+        "coupon_code": "BOOKBUNDLE",
+        "description": "Buy 3, Get 1 Free on select titles",
+        "expiry_date": "2024-11-30",
+        "condition": "Applicable on select genres",
+        "coupon_type": "bundle"
+      }
+    ],
+    "shop_link": "https://www.bookhaven.ie/",
+    "category": "Books",
+    "isSaleOn": true
+  },
+  {
+    "_id": "6c7d8e9f",
+    "brand_name": "Chaldal",
+    "rating": 4.9,
+    "description": "Choose eco-friendly products to embrace a sustainable lifestyle.",
+    "brand_logo": "https://i.ibb.co.com/LNphxmt/greenE.webp",
+    "coupons": [
+      {
+        "coupon_code": "ECO10",
+        "description": "10% off on all eco-friendly items",
+        "expiry_date": "2024-12-15",
+        "condition": "No minimum order value",
+        "coupon_type": "percentage"
+      },
+      {
+        "coupon_code": "SAVE25",
+        "description": "25% off on biodegradable products",
+        "expiry_date": "2024-12-25",
+        "condition": "Valid for first-time customers only",
+        "coupon_type": "percentage"
+      }
+    ],
+    "shop_link": "https://greenearthcleaning.com/",
+    "category": "Sustainability",
+    "isSaleOn": true
+  }
+]

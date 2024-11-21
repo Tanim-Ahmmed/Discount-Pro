@@ -3,24 +3,34 @@ import { NavLink, Link } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Header = () => {
-           console.log(import.meta.env.VITE_a);
-  const {user, logOut} = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
 
-    const links = <>
-                <li> <NavLink to="/">Home</NavLink> </li>
-                <li> <NavLink to="/brands">Brands</NavLink> </li>
-              {
-                user && <li> <NavLink to="/profile">My-profile</NavLink> </li>
-              }
-                <li> <NavLink to="/about">About Dev</NavLink> </li>
-
-
-                 </>
-
+  const links = (
+    <>
+      <li>
+        {" "}
+        <NavLink to="/">Home</NavLink>{" "}
+      </li>
+      <li>
+        {" "}
+        <NavLink to="/brands">Brands</NavLink>{" "}
+      </li>
+      {user && (
+        <li>
+          {" "}
+          <NavLink to="/profile">My-profile</NavLink>{" "}
+        </li>
+      )}
+      <li>
+        {" "}
+        <NavLink to="/about">About Dev</NavLink>{" "}
+      </li>
+    </>
+  );
 
   return (
-    <div className="w-11/12 mx-auto ">
-      <div className="navbar bg-[#124E66]      text-white">
+    <div className="w-11/12 mx-auto bg-[#124E66] ">
+      <div className="navbar   text-white">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -43,35 +53,62 @@ const Header = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-[#124E66] rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
-            {
-                links
-            }
-
+              {links}
             </ul>
           </div>
-          <a className="btn hidden btn-ghost text-xl md:flex hover:bg-inherit  ">DISCOUNT PRO</a>
+          <a className="btn hidden btn-ghost text-xl md:flex hover:bg-inherit  ">
+            DISCOUNT PRO
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-
-           {
-            links
-           }
-          </ul>
+          <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
-        
+
         <div className="navbar-end">
-          <div>
-            <p>{user && user.email}</p>
-          </div>
-          <div className=" hover:bg-[#0f4155] p-1"> 
           {
-            user && user?.email ? <button  onClick={logOut} className="btn font-semibold text-red-400 text-lg rounded-none btn-neutral" to="/" >LogOut</button> : <Link className="btn btn-neutral text-lg font-bold rounded-none text-[#50a7c9] " to="/auth/login" >Login</Link>
-          }
+            user && <div className="flex items-center">
+            <p className="hidden md:flex ">{ user?.email}</p>
+            <div className="avatar online mx-2">
+              <div className="w-10 rounded-full ">
+                <img src={user?.photoURL}/>
+              </div>
+            </div>
           </div>
-          
+          }
+          <div className="">
+            {user && user?.email ? (
+              <button
+                onClick={logOut}
+                className="btn font-semibold text-red-400 text-lg rounded-none btn-neutral"
+                to="/"
+              >
+                LogOut
+              </button>
+            ) : (
+              <div className="space-x-2">
+                <Link
+                  className=" bg-gray-800 py-2 px-3 text-lg font-bold rounded-none text-[#50a7c9] "
+                  to="/auth/login"
+                >
+                  Login
+                </Link>
+                <Link
+                  className=" bg-gray-800 py-2 px-3 text-lg font-bold rounded-none text-[#50a7c9] "
+                  to="/auth/register"
+                >
+                  Register
+                </Link>
+              </div>
+            )}
+          </div>
         </div>
       </div>
+
+      {user && user?.email && (
+        <p className="text-center pb-2 text-green-500 font-semibold">
+          Welcome <span> {user.displayName} </span>
+        </p>
+      )}
     </div>
   );
 };
