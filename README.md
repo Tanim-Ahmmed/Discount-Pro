@@ -30,5 +30,5 @@ Below are the key NPM packages used in this project:
 - `react-router-dom`: For routing and navigation.
 - `firebase`: For backend services like authentication.
 - `react-toastify`: For showing toast notifications.
-- `react-icons`: For icons in the UI.
+- `react-icons`: For icons in the UI
 - `animate.css`: For prebuilt CSS animations.
